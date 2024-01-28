@@ -1,0 +1,274 @@
+@font-face {
+    font-family: vazir;
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    outline: none;border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 2s linear;
+    font-style: normal;
+    font-weight: 400;
+    src: format("font/Vazir-Regular.eot");
+    src: url("font/Vazir-Regular.woff") format('woff'),
+         url("font/Vazir-Regular.ttf") format('ttf'),
+         url("font/Vazir-Regular.woff2") format('woff2'),
+         
+}
+
+@font-face {
+    font-family: vazir;
+    font-style: normal;
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    outline: none;border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 2s linear;
+    font-weight: 950;
+    src: format("font/Vazir-Black.eot");
+    src: url("font/Vazir-Black.woff") format('woff'),
+         url("font/Vazir-Black.ttf") format('ttf'),
+         url("font/Vazir-Black.woff2") format('woff2'),
+         
+}
+
+:root{
+    --main-color:#fcc719;
+    --black:#13131a;
+    --bg:#010103;
+    --border:.1rem solid rgba(255,255,255,.3);
+}
+
+body{
+    font-family: vazir;
+    background: var(--bg);
+}
+
+section{
+    padding: 2rem 7%;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: 8rem;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+.header{
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;right: 0;left: 0;
+    z-index: 1000;
+}
+
+.header .logo img{
+    height: 6rem;
+}
+
+.header .navbar a{
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.header .navbar a:hover{
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.header .icons div{
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover{
+    color: var(--main-color);
+}
+
+#menu-btn{
+    display: none;
+}
+
+.header .search-form{
+    position: absolute;
+    top: 115%; right: 7%;
+    background: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.header .search-form.active{
+    transform: scaleY(1);
+}
+
+.header .search-form input{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 1rem;
+    text-transform: none;
+}
+
+.header .search-form label{
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color: var(--black);
+}
+
+.header .search-form label:hover{
+    color: var(--main-color);
+}
+
+.reservation{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.reservation .image{
+    width: 55%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-top: 9rem;
+}
+
+.reservation .image img{
+    width: 100%;
+}
+
+.reservation .form{
+    background: var(--black);
+    width: 45%;
+    padding: 9rem 7%;
+}
+
+.reservation .form h1{
+    color: #fff;    
+}
+
+.reservation .form-holder{
+    display: flex;
+    grid-gap: 3rem;
+    width: 100%;
+    color: #fff;
+}
+
+.reservation .form form input,
+.reservation .form form select{
+    display: block;
+    margin: 2rem 0;
+    width: 100%;
+    background: none;
+    border-bottom: .1rem solid #b7b3b3;
+    font-size: 2.8rem;
+    font-weight: 400;
+}
+
+.reservation .form form input::placeholder{
+    color: #b7b3b3;
+}
+
+.reservation .form  .heading{
+    color: var(--main-color);
+}
+
+.reservation .form .sub-heading{
+    color: var(#fff);
+}
+
+.reservation .form .form-holder .select .option{
+    color: #fff;
+}
+
+.reservation .form .btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--main-color);
+    cursor: pointer;
+}
+
+.footer{
+    background: var(--black);
+    text-align: center;    
+}
+
+.footer .share{
+    padding: 1rem 0;
+}
+
+.footer .share a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: #fff;
+    border: var(--border);
+    margin: .3rem;
+    border-radius: 50%;
+}
+
+.footer .share a:hover{
+    background-color: var(--main-color);
+}
+
+.footer .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 1rem;
+}
+
+.footer .links a{
+    padding: .7rem 2rem;
+    color: #fff;
+    border: var(--border);
+    font-size: 2rem;
+}
+
+.footer .links a:hover{
+    background: var(--main-color);
+}
+
+.footer .credit{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: lighter;
+    padding: 1.5rem;
+}
+
+.footer .credit span{
+    color: var(--main-color);
+}
